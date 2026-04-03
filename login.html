@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - iStore Apple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <form id="form-login" class="form-box">
+            <h2 class="logo" style="color: #009FE3; text-align: center; margin-bottom: 20px;">iStore Apple</h2>
+            <h3 style="text-align: center; margin-bottom: 20px;">ĐĂNG NHẬP</h3>
+            
+            <input type="text" id="login-username" placeholder="Tên đăng nhập" required>
+            <input type="password" id="login-password" placeholder="Mật khẩu" required>
+            
+            <button type="submit" class="btn-submit">Đăng Nhập</button>
+            <p class="switch-form">Chưa có tài khoản? <a href="#" id="go-to-register">Đăng ký ngay</a></p>
+            <p class="switch-form" style="margin-top: 15px;"><a href="index.html" style="color: #666; font-weight: normal;"><i class="fas fa-home"></i> Trở về trang chủ</a></p>
+        </form>
+
+        <form id="form-register" class="form-box" style="display: none;">
+            <h2 class="logo" style="color: #009FE3; text-align: center; margin-bottom: 10px;">iStore Apple</h2>
+            <h3 style="text-align: center; margin-bottom: 15px;">ĐĂNG KÝ TÀI KHOẢN</h3>
+            
+            <input type="text" id="reg-username" placeholder="Tên đăng nhập" required>
+            <input type="email" id="reg-email" placeholder="Email (VD: example@gmail.com)" required>
+            <input type="tel" id="reg-phone" placeholder="Số điện thoại (Bắt buộc 10 số)" required>
+            <input type="password" id="reg-password" placeholder="Tạo mật khẩu" required>
+            <input type="password" id="reg-repassword" placeholder="Nhập lại mật khẩu" required>
+            
+            <button type="submit" class="btn-submit" style="background-color: #28a745; margin-top: 5px;">Đăng Ký</button>
+            <p class="switch-form">Đã có tài khoản? <a href="#" id="go-to-login">Quay lại Đăng nhập</a></p>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iStore - Chuyên Apple Chính Hãng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">iStore Apple</div>
+            <div class="search-box">
+                <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <div class="user-menu" style="display: flex; align-items: center; gap: 15px;">
+                    <a href="login.html" id="btn-dang-nhap" class="cart-link" style="background: white; color: #009FE3;">
+                        <i class="fas fa-user"></i> <span style="font-weight: bold;">Đăng nhập</span>
+                    </a>
+                    <span id="ten-nguoi-dung" style="display: none; font-size: 14px;"></span>
+                    <a href="#" id="btn-dang-xuat" style="display: none; color: white; text-decoration: underline; font-size: 14px; margin-left: 10px;">Đăng xuất</a>
+                </div>
+                <a href="cart.html" class="cart-link" style="margin-left: 15px;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-text">Giỏ hàng (0)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="banner">
+            <img src="images/banner.png" alt="Banner" style="width: 100%; border-radius: 10px;">
+        </section>
+
+        <div class="filter-section" id="danh-muc-san-pham">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="iphone">iPhone</button>
+            <button class="filter-btn" data-filter="mac-pro">MacBook Pro</button>
+            <button class="filter-btn" data-filter="mac-air">MacBook Air</button>
+            <button class="filter-btn" data-filter="mac-mini">Mac Mini & iMac</button>
+            <button class="filter-btn" data-filter="phu-kien">Phụ kiện & Watch</button>
+        </div>
+
+        <div class="product-grid">
+            
+            <div class="product-item" data-category="iphone">
+                <span class="badge" style="background: #e5002d;">Hot Nhất</span>
+                <button class="cart-icon-btn" data-name="iPhone 15 Pro Max 256GB" data-price="34990000" data-img="images/iPhone 15 Pro Max 256GB.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/iPhone 15 Pro Max 256GB.jpg" alt="iPhone 15 Pro Max">
+                <h3>iPhone 15 Pro Max 256GB Titan</h3>
+                <div class="price-box"><span class="new-price">34.990.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="iphone">
+                <button class="cart-icon-btn" data-name="iPhone 15 128GB" data-price="22990000" data-img="images/iPhone 15 128GB.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/iPhone 15 128GB.jpg" alt="iPhone 15">
+                <h3>iPhone 15 128GB Chính Hãng</h3>
+                <div class="price-box"><span class="new-price">22.990.000đ</span><span class="old-price">24.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="iphone">
+                <button class="cart-icon-btn" data-name="iPhone 14 Plus 128GB" data-price="21500000" data-img="images/iPhone 14 Plus 128GB.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/iPhone 14 Plus 128GB.jpg" alt="iPhone 14 Plus">
+                <h3>iPhone 14 Plus 128GB</h3>
+                <div class="price-box"><span class="new-price">21.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="iphone">
+                <span class="badge" style="background: #28a745;">Giá Tốt</span>
+                <button class="cart-icon-btn" data-name="iPhone 13 128GB" data-price="15990000" data-img="images/iPhone 13 128GB.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/iPhone 13 128GB.jpg" alt="iPhone 13">
+                <h3>iPhone 13 128GB VN/A</h3>
+                <div class="price-box"><span class="new-price">15.990.000đ</span><span class="old-price">17.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-pro">
+                <span class="badge">Mới</span>
+                <button class="cart-icon-btn" data-name="MacBook Pro 15 inch 2018" data-price="10800000" data-img="images/mbp-2018.png"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/mbp-2018.png" alt="Mac Pro 2018">
+                <h3>MacBook Pro 15 inch 2018 i7/16GB</h3>
+                <div class="price-box"><span class="new-price">10.800.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-pro">
+                <button class="cart-icon-btn" data-name="MacBook Pro 16 inch 2019" data-price="12500000" data-img="images/mbp-2019.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/mbp-2019.jpg" alt="Mac Pro 2019">
+                <h3>MacBook Pro 16 inch 2019 i7/16GB</h3>
+                <div class="price-box"><span class="new-price">12.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-pro">
+                <span class="badge" style="background: #28a745;">BH 36 Tháng</span>
+                <button class="cart-icon-btn" data-name="MacBook Pro 16 inch 2019 Bạc" data-price="12500000" data-img="images/mbp-2019-bac.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/mbp-2019-bac.jpg" alt="Mac Pro Bạc">
+                <h3>MacBook Pro 16 inch 2019 Bạc</h3>
+                <div class="price-box"><span class="new-price">12.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-air">
+                <span class="badge" style="background: #ffc107; color: black;">Hot Sale</span>
+                <button class="cart-icon-btn" data-name="MacBook Air M2 2022" data-price="24590000" data-img="images/MacBook Air M2 2022.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/MacBook Air M2 2022.jpg" alt="Mac Air M2">
+                <h3>MacBook Air M2 2022 8GB/256GB</h3>
+                <div class="price-box"><span class="new-price">24.590.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-air">
+                <button class="cart-icon-btn" data-name="MacBook Air M1 2020" data-price="18500000" data-img="images/MacBook Air M1 2020.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/MacBook Air M1 2020.jpg" alt="Mac Air M1">
+                <h3>MacBook Air M1 2020 8GB/256GB</h3>
+                <div class="price-box"><span class="new-price">18.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-mini">
+                <button class="cart-icon-btn" data-name="Mac Mini M2 2023" data-price="14490000" data-img="images/Mac Mini M2 2023.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/Mac Mini M2 2023.jpg" alt="Mac Mini">
+                <h3>Mac Mini M2 2023 8GB/256GB</h3>
+                <div class="price-box"><span class="new-price">14.490.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="mac-mini">
+                <button class="cart-icon-btn" data-name="iMac 24 inch M3" data-price="36990000" data-img="images/iMac 24 inch M3.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/iMac 24 inch M3.jpg" alt="iMac">
+                <h3>iMac 24 inch M3 (Màu Xanh)</h3>
+                <div class="price-box"><span class="new-price">36.990.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="phu-kien">
+                <span class="badge" style="background: purple;">Mới</span>
+                <button class="cart-icon-btn" data-name="Apple Watch Series 9" data-price="10500000" data-img="images/Apple Watch Series 9.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/Apple Watch Series 9.jpg" alt="Watch 9">
+                <h3>Apple Watch Series 9 41mm Nhôm</h3>
+                <div class="price-box"><span class="new-price">10.500.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="phu-kien">
+                <button class="cart-icon-btn" data-name="AirPods Pro Gen 2" data-price="5990000" data-img="images/AirPods Pro Gen 2.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/AirPods Pro Gen 2.jpg" alt="AirPods">
+                <h3>Tai nghe AirPods Pro Gen 2</h3>
+                <div class="price-box"><span class="new-price">5.990.000đ</span></div>
+            </div>
+
+            <div class="product-item" data-category="phu-kien">
+                <button class="cart-icon-btn" data-name="Sạc Apple 20W" data-price="550000" data-img="images/Sac Apple 20W.jpg"><i class="fas fa-shopping-cart"></i></button>
+                <img src="images/Sac Apple 20W.jpg" alt="Sạc">
+                <h3>Củ Sạc Nhanh Apple 20W Type-C</h3>
+                <div class="price-box"><span class="new-price">550.000đ</span></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column"><h3>Về iStore Apple</h3><ul><li><a href="#">Về chúng tôi</a></li></ul></div>
+            <div class="footer-column"><h3>Chính sách</h3><ul><li><a href="#">Bảo hành</a></li></ul></div>
+            <div class="footer-column"><h3>Thông tin</h3><ul><li><a href="#">Hệ thống</a></li></ul></div>
+            <div class="footer-column"><h3>Tổng đài</h3><ul><li>Hotline: 0898.143.789</li></ul></div>
+            <div class="footer-column"><h3>Thanh toán</h3><div class="payment-methods"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i></div></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

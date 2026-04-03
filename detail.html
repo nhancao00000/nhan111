@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - iStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #f4f6f8;">
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">iStore Apple</div>
+            <div class="search-box">
+                <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <div class="user-menu" style="display: flex; align-items: center; gap: 15px;">
+                    <a href="login.html" id="btn-dang-nhap" class="cart-link" style="background: white; color: #009FE3;">
+                        <i class="fas fa-user"></i> <span style="font-weight: bold;">Đăng nhập</span>
+                    </a>
+                    <span id="ten-nguoi-dung" style="display: none; font-size: 14px;"></span>
+                    <a href="#" id="btn-dang-xuat" style="display: none; color: white; text-decoration: underline; font-size: 14px; margin-left: 10px;">Đăng xuất</a>
+                </div>
+                <a href="cart.html" class="cart-link" style="margin-left: 15px;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-text">Giỏ hàng (0)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 20px; margin-bottom: 50px;">
+        <div class="breadcrumb" style="margin-bottom: 15px; font-size: 14px; color: #666;">
+            <a href="index.html" style="color: #009FE3; text-decoration: none;">Trang chủ</a> / 
+            <span id="detail-breadcrumb">Sản phẩm</span>
+        </div>
+
+        <div class="detail-top-section" style="background: white; padding: 20px; border-radius: 10px; display: flex; gap: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <div class="detail-gallery" style="flex: 4;">
+                <h1 id="detail-name" style="font-size: 24px; margin-bottom: 15px; color: #333;">Tên sản phẩm</h1>
+                <div class="main-image" style="border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; margin-bottom: 15px;">
+                    <img id="detail-img" src="" alt="Sản phẩm" style="max-width: 100%; height: 350px; object-fit: contain;">
+                </div>
+                <div class="policy-box" style="display: flex; justify-content: space-between; font-size: 13px; color: #444; background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                    <div><p><i class="fas fa-shield-alt" style="color: #28a745;"></i> Bảo hành chính hãng 12 tháng</p><p><i class="fas fa-sync" style="color: #009FE3;"></i> 1 đổi 1 trong 30 ngày nếu lỗi NSX</p></div>
+                    <div><p><i class="fas fa-box-open" style="color: #ff9900;"></i> Bộ sản phẩm gồm: Hộp, Sách HD, Cáp sạc</p><p><i class="fas fa-truck" style="color: #e5002d;"></i> Miễn phí giao hàng toàn quốc</p></div>
+                </div>
+            </div>
+
+            <div class="detail-summary" style="flex: 3;">
+                <div style="text-align: right; margin-bottom: 10px;"><span style="background: #28a745; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">Tình trạng: Còn hàng</span></div>
+                <div class="price-area" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                    <p id="detail-price" style="font-size: 32px; font-weight: bold; color: #e5002d; margin-bottom: 5px;">0 đ</p>
+                    <p style="font-size: 14px; color: #999; text-decoration: line-through;">Giá niêm yết: <span id="detail-old-price">0 đ</span></p>
+                </div>
+                <div class="variants" style="margin-bottom: 20px;"><p style="font-weight: bold; margin-bottom: 10px; font-size: 14px;">Màu sắc khả dụng:</p><div style="display: flex; gap: 10px;"><button class="variant-btn active">Màu Tiêu Chuẩn</button></div></div>
+                <div class="promo-box" style="border: 1px dashed #e5002d; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
+                    <div style="background: #e5002d; color: white; padding: 8px 15px; font-weight: bold; font-size: 14px;"><i class="fas fa-gift"></i> ƯU ĐÃI VÀ QUÀ TẶNG THÊM</div>
+                    <ul style="padding: 15px 20px 15px 35px; font-size: 14px; line-height: 1.6; color: #333;"><li>Tặng Ốp lưng thời trang / Balo chống sốc.</li><li>Trợ giá thu cũ đổi mới lên đến 2.000.000đ.</li><li>Giảm 20% khi mua kèm phụ kiện.</li></ul>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="btn-add-detail" style="flex: 2; background: #e5002d; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                        MUA NGAY <br><span style="font-size: 12px; font-weight: normal;">(Giao tận nơi hoặc nhận tại cửa hàng)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-bottom-section" style="display: flex; gap: 30px;">
+            <div class="article-section" style="flex: 65; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h2 style="font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid #009FE3; padding-bottom: 10px; display: inline-block;">Đặc điểm nổi bật</h2>
+                <div style="font-size: 15px; line-height: 1.8; color: #333;">
+                    <p id="article-text" style="margin-bottom: 15px;">Bài viết chi tiết...</p>
+                    <img id="article-img" src="" style="width: 100%; border-radius: 10px; margin: 15px 0;">
+                </div>
+            </div>
+
+            <div class="specs-section" style="flex: 35; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); align-self: flex-start;">
+                <h2 style="font-size: 20px; margin-bottom: 20px;">Thông số kỹ thuật</h2>
+                <table class="specs-table">
+                    <tbody>
+                        <tr><td>Màn hình:</td><td id="spec-screen">...</td></tr>
+                        <tr><td>Vi xử lý (CPU):</td><td id="spec-cpu">...</td></tr>
+                        <tr><td>RAM:</td><td id="spec-ram">...</td></tr>
+                        <tr><td>Bộ nhớ trong:</td><td id="spec-storage">...</td></tr>
+                        <tr><td>Camera:</td><td id="spec-cam">...</td></tr>
+                        <tr><td>Hệ điều hành:</td><td id="spec-os">...</td></tr>
+                        <tr><td>Pin & Sạc:</td><td id="spec-pin">...</td></tr>
+                        <tr><td>Chất liệu:</td><td id="spec-mat">...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column"><h3>Về iStore Apple</h3><ul><li><a href="#">Về chúng tôi</a></li></ul></div>
+            <div class="footer-column"><h3>Tổng đài</h3><ul><li>Hotline: 0898.143.789</li></ul></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
